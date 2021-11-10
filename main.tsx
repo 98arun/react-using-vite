@@ -3,13 +3,15 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import ClassComp from "./ClassComp";
-import MeetHome from "./Meet/MeetHome";
+import MeetHome from "./Molecules/Meet/MeetHome";
+import ListHome from "./Molecules/List/ListHome";
 
 ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
     {/* <ClassComp /> */}
-    <MeetHome />
+    {/* <MeetHome /> */}
+    <ListHome />
   </React.StrictMode>,
   document.getElementById("root")
 );

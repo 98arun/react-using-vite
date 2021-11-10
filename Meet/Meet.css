@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.meet-home-p {
+  font-size: 50px;
+  text-align: center;
+}
+.meet-home {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+.meet-title {
+  color: #eeeeee;
+  align-self: flex-start;
+}
+.meet-img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+.meet-container {
+  width: 300px;
+  height: 250px;
+  background-color: #000;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 10px;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+}

@@ -20,8 +20,9 @@ export default class ClassComp extends Component<any, any> {
   };
 
   _handleAdd = () => {
+    const counter = Number(this.state.inp1) + Number(this.state.inp2);
     this.setState({
-      counter: parseInt(this.state.inp1) + parseInt(this.state.inp2),
+      counter,
     });
   };
   _handleSub = () => {
@@ -40,6 +41,21 @@ export default class ClassComp extends Component<any, any> {
     });
   };
 
+  _handleInput = (key: string, value: string) => {
+    console.log({ key, value });
+    this.setState({
+      [key]: value,
+    });
+  };
+
+  _handleInputWithEvent = (e: any) => {
+    const { name, value } = e.target;
+    console.log({ name, value });
+    this.setState({
+      [name]: value,
+    });
+  };
+
   render() {
     const { inp1, inp2, counter } = this.state;
     return (
@@ -47,8 +63,24 @@ export default class ClassComp extends Component<any, any> {
         <div className="Apps">
           <div className="wrap">
             <p>The Answer is : {counter}</p>
-            <input type="text" value={inp1} onChange={this._handleOnchange1} />
-            <input type="text" value={inp2} onChange={this._handleOnchange2} />
+            <input
+              type="text"
+              name="inp1"
+              value={inp1}
+              /*  onChange={(e) => {
+                this._handleInput("inp1", e.target.value);
+              }} 
+              // onChange={this._handleInputWithEvent}
+            />
+            <input
+              type="text"
+              name="inp2"
+              value={inp2}
+              /* onChange={(e) => {
+                this._handleInput("inp2", e.target.value);
+              }} */
+              onChange={this._handleInputWithEvent}
+            />
             <button onClick={this._handleAdd}>Add</button>
             <button onClick={this._handleSub}>Sub</button>
             <button onClick={this._handleMultiply}>Multiply</button>

@@ -4,7 +4,7 @@ function Meet(props: any) {
   return (
     <div className="meet-container">
       <p className="meet-title">{uname}</p>
-      <img className="meet-img" src={image} alt={uname} />
+      <img className="meet-img" src={image} />
     </div>
   );
 }

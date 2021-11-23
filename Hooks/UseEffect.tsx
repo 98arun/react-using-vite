@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { GetRequest } from "../Utilites/Network";
+
 let a = 1;
 const UseEffectComp = (props: any) => {
   const [searchInput, setSearchInput] = useState("");

@@ -15,6 +15,8 @@ import MainComp from "./Routing/MainComp";
 import RouterComp from "./Routing/RouterComp";
 import UseMemoComp from "./Hooks/UseMemo";
 import UseEffectComp from "./Hooks/UseEffect";
+import ClassContext from "./Contex";
+import UseRef from "./Hooks/UseRef";
 ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
@@ -30,7 +32,9 @@ ReactDOM.render(
     </BrowserRouter> */}
     {/* <RouterComp /> */}
     {/* <UseMemoComp /> */}
-    <UseEffectComp />
+    {/* <UseEffectComp /> */}
+    {/* <ClassContext /> */}
+    <UseRef />
   </React.StrictMode>,
   document.getElementById("root")
 );

@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Meet from "../Molecules/Meet/Meet";
 import { GetRequest } from "../Utilites/Network";
+import MovieCard from "./MovieCard";
 import Pagination from "./Pagination";
 
 function MoviesSearch() {
@@ -46,7 +46,7 @@ function MoviesSearch() {
       //   return Poster;
       // }
 
-      return <Meet key={imdbID} uname={Title} image={Poster} />;
+      return <MovieCard key={imdbID} uname={Title} image={Poster} />;
     });
   };
 

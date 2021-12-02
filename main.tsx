@@ -17,6 +17,11 @@ import UseMemoComp from "./Hooks/UseMemo";
 import UseEffectComp from "./Hooks/UseEffect";
 import ClassContext from "./Contex";
 import UseRef from "./Hooks/UseRef";
+import store from "./Redux/store";
+import MainRedux from "./Redux/Main";
+import { Provider } from "react-redux";
+import Navigation from "./Redux/Navigation";
+import Cakes from "./Redux/Cakes";
 ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
@@ -34,7 +39,11 @@ ReactDOM.render(
     {/* <UseMemoComp /> */}
     {/* <UseEffectComp /> */}
     {/* <ClassContext /> */}
-    <UseRef />
+    {/* <UseRef /> */}
+    <Provider store={store}>
+      <Navigation />
+      <Cakes />
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );

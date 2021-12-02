@@ -1,4 +1,4 @@
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Link, Outlet, Route, Routes } from "react-router-dom";
 
 const RouterComp = (props: any) => {
   var paddingLeft = { paddingLeft: "10px" };
@@ -16,7 +16,9 @@ const RouterComp = (props: any) => {
       <Routes>
         <Route path="/" element={Menu1()} />
         <Route path="/menu1" element={Menu1()} />
-        <Route path="/menu2" element={Menu2()} />
+        <Route path="/menu2/*" element={Menu2()}>
+          <Route path="new" element={Menu1()} />
+        </Route>
         <Route path="/menu3" element={Menu3()} />
       </Routes>
       <br />
@@ -33,6 +35,8 @@ let Menu2 = () => {
   return (
     <div>
       <h3>Menu 2</h3>
+      <Link to="new">new</Link>
+      <Outlet />
     </div>
   );
 };
@@ -40,7 +44,7 @@ let Menu2 = () => {
 let Menu3 = () => {
   return (
     <div>
-      <h3>Menu 3</h3>
+      <h3>Menu 3 </h3>
     </div>
   );
 };
